@@ -1,10 +1,12 @@
 package Utils;
 
+import Plateu.PlateauCreator;
+
 import java.util.Scanner;
 
 public class InstructionsParser {
 
-    public int[][] plateauCreatorParser() {
+    public PlateauCreator plateauCreatorParser() {
         int axisY = 0;
         int axisX = 0;
         while (true) {
@@ -20,6 +22,6 @@ public class InstructionsParser {
             }
         }
 
-        return new int[axisY][axisX];
+        return new PlateauCreator(axisY,axisX);
     }
 }

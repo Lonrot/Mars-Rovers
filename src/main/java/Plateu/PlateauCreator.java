@@ -21,5 +21,11 @@ public class PlateauCreator {
         }
         return plateauGrid;
     }
+    public int getAxisY(){
+        return axisY;
+    }
+    public int getAxisX() {
+        return axisX;
+    }
 
 }

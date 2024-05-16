@@ -9,7 +9,7 @@ public class PlateauCreator {
     private final int[][] plateauGrid;
 
 
-    public PlateauCreator(int axisY, int axisX)  throws RuntimeException {
+    public PlateauCreator(int axisY, int axisX){
         this.axisX = axisX;
         this.axisY = axisY;
         this.plateauGrid = new int[axisY][axisX];

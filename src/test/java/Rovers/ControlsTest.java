@@ -10,15 +10,21 @@ class ControlsTest {
     @Test
     void rotation() {
         Controls controls = new Controls(0,0, Controls.Facing.NORTH);
+        Controls controls2 = new Controls(0,0, Controls.Facing.EAST);
+        Controls controls3 = new Controls(0,0, Controls.Facing.WEST);
+        Controls controls4 = new Controls(0,0, Controls.Facing.SOUTH);
 
-        var result = controls.rotation(Controls.Commands.R, Controls.Facing.NORTH);
-        var result2 = controls.rotation(Controls.Commands.L, Controls.Facing.NORTH);
-        var result3 = controls.rotation(Controls.Commands.R, Controls.Facing.SOUTH);
-        var result4 = controls.rotation(Controls.Commands.R, Controls.Facing.WEST);
-        assertEquals(Controls.Facing.EAST,result);
-        assertEquals(Controls.Facing.WEST,result2);
-        assertEquals(Controls.Facing.WEST,result3);
-        assertEquals(Controls.Facing.NORTH,result4);
+
+        var test = controls.rotation(Controls.Commands.L);
+        var test2 = controls2.rotation(Controls.Commands.L);
+        var test3 = controls3.rotation(Controls.Commands.R);
+        var test4 = controls4.rotation(Controls.Commands.R);
+        assertEquals(Controls.Facing.WEST,test);
+        assertEquals(Controls.Facing.NORTH,test2);
+        assertEquals(Controls.Facing.NORTH, test3);
+        assertEquals(Controls.Facing.WEST,test4);
+
+
     }
     @Test
     void moveForwardTest(){

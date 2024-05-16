@@ -18,8 +18,8 @@ public class Controls {
         return this.actualFacing;
     }
 
-    public Facing rotation(Commands commands, Facing facing) {
-        facing = getActualFacing();
+    public Facing rotation(Commands commands) {
+        Facing facing = getActualFacing();
         return switch (commands) {
             case L -> switch (facing) {
                 case NORTH -> actualFacing = Facing.WEST;
